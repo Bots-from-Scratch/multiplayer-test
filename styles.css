@@ -1,0 +1,25 @@
+#blocklyDiv {
+    height: 480px;
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #runButton, #resetButton {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #runButton:hover, #resetButton:hover {
+    background-color: #3e8e41;
+  }
+  
