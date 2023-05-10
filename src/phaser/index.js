@@ -32,7 +32,7 @@ class Example extends Phaser.Scene {
     const particles = this.add.particles(0, 0, "red", {
       speed: 100,
       scale: { start: 1, end: 0 },
-      blendMode: "ADD",
+      blendMode: "NORMAL",
     });
 
     const logo = this.physics.add.image(400, 100, "logo");
