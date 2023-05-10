@@ -1,0 +1,29 @@
+{
+  "name": "multiplayer-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bots-from-Scratch/multiplayer-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bots-from-Scratch/multiplayer-test/issues"
+  },
+  "homepage": "https://github.com/Bots-from-Scratch/multiplayer-test#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "phaser": "^3.55.2",
+    "socket.io": "^4.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
