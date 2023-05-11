@@ -1,66 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Server Test</title>
-    <script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
-    <!-- <script src="./phaser/index.js"></script> -->
-    <script>
-        const config = {
-            type: Phaser.AUTO,
-            width: 800,
-            height: 600,
-            physics: {
-                default: "arcade",
-                arcade: {
-                    gravity: { y: 200 },
-                },
-            },
-            scene: Example,
-        };
-
-        const game = new Phaser.Game(config);
-
-        class Example extends Phaser.Scene {
-            constructor() {
-                super();
-            }
-
-            preload() {
-                this.load.setBaseURL("https://labs.phaser.io");
-
-                this.load.image("sky", "assets/skies/space3.png");
-                this.load.image("logo", "assets/sprites/phaser3-logo.png");
-                this.load.image("red", "assets/particles/red.png");
-            }
-
-            create() {
-                this.add.image(400, 300, "sky");
-
-                const particles = this.add.particles(0, 0, "red", {
-                    speed: 100,
-                    scale: { start: 1, end: 0 },
-                    blendMode: "NORMAL",
-                });
-
-                const logo = this.physics.add.image(400, 100, "logo");
-
-                logo.setVelocity(100, 200);
-                logo.setBounce(1, 1);
-                logo.setCollideWorldBounds(true);
-
-                particles.startFollow(logo);
-            }
-        }
-
-    </script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script> -->
+    <script src="phaser.min.js"></script>
+    <script src="index.js" type="module"></script>
 </head>
 
 <body>
-    <div id="game"></div>
+
 </body>
 
 </html>
