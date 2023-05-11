@@ -1,9 +1,3 @@
-// import Phaser from 'phaser';
-// import sky from './assets/sky.png';
-// import platform from './assets/platform.png';
-// import dude from './assets/dude.png';
-// import star from './assets/star.png';
-// import bomb from './assets/bomb.png';
 
 var player;
 var stars;
@@ -94,13 +88,18 @@ class MyGame extends Phaser.Scene {
 
     update() {
         if (cursors.left.isDown) {
+            console.log(player.x, player.y);
+
             player.setVelocityX(-160);
 
             player.anims.play('left', true);
         } else if (cursors.right.isDown) {
+            console.log(player.x, player.y);
+
             player.setVelocityX(160);
 
             player.anims.play('right', true);
+
         } else {
             player.setVelocityX(0);
 
@@ -108,8 +107,12 @@ class MyGame extends Phaser.Scene {
         }
 
         if (cursors.up.isDown) {
+            console.log(player.x, player.y);
+
             player.setVelocityY(-160);
         } else if (cursors.down.isDown) {
+            console.log(player.x, player.y);
+
             player.setVelocityY(160);
         } else {
             player.setVelocityY(0);
